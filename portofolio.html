@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+    <title>Portofolio</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style type="text/css">
+    
+        body {
+          font-family: "Open Sans", Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        #navbar {
+          margin: 0 auto;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          background-color: #b6c2b6;
+          position: fixed;
+          width: 100%;
+          z-index: 2;
+          text-align: right;
+        }
+
+        #navbar a {
+          text-decoration: none;
+          font-size: 18px;
+          color: #76817d;
+          margin: 0 25px;
+        }
+
+        #navbar a:hover {
+          color: #6b6c63;
+        }
+
+        #welcome-section {
+          height: 100vh;
+          width: 100%;
+          background-color: #4e463e;
+          text-align: center;
+        }
+
+        #welcome-msg {
+          position: relative;
+          top: 30%;
+          z-index: 1;
+          color: #98a798;
+        }
+
+        #circle {
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+          background-color: #76817d;
+          position: relative;
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: 1s;
+          transition-timing-function: linear;
+        }
+
+        #projects {
+          padding-right: 5%;
+          padding-left: 5%;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(120px, 1fr));
+          background-color: #6b6c63;
+          height: 100vh;
+        }
+
+        #projects a {
+          text-decoration: none;
+          color: #4e463e;
+        }
+
+        #projects a:hover {
+          text-decoration: underline;
+          color: #76817d;
+        }
+
+        .col-1 {
+          grid-column: 1 / 2;
+          justify-self: center;
+          align-self: center;
+          text-align: center;
+        }
+
+        .col-2 {
+          grid-column: 2 / 3;
+          justify-self: center;
+          align-self: center;
+          text-align: center;
+        }
+
+        .project-tile {
+          width: 50%;
+          height: 80%;
+          background-color: #b6c2b6;
+          border-radius: 6px;
+        }
+
+        .project-tile:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .label {
+          position: relative;
+          top: 70%;
+        }
+
+        #contact {
+          height: 50vh;
+          width: 100%;
+          background-color: #76817d;
+          text-align: center;
+          color: #4e463e;
+        }
+
+        #contact-text {
+          position: relative;
+          top: 15%;
+        }
+
+        #contact-text h2 {
+          margin: 0;
+        }
+
+        #contact-text p {
+          margin: 0;
+          padding-top: 10px;
+          padding-bottom: 8px;
+          background-color: #76817d;
+        }
+
+        .profile {
+          position: relative;
+          top: 12%;
+          background-color: #76817d;
+        }
+
+        .profile img {
+          margin: 0;
+          height: 10%;
+          width: 10%;
+        }
+
+        @media screen and (max-width: 500px) {
+          #navbar {
+            text-align: center;
+          }
+
+          #navbar a {
+            margin: 0 20px;
+          }
+
+          .project-tile {
+            width: 80%;
+            height: 80%;
+          }
+        }
+
+        @media screen and (max-height: 300px) {
+          #welcome-msg {
+            position: relative;
+            top: 2%;
+          }
+        }
+
+        
+    </style>
+</head>
+<body>
+   
+   <div id="navbar">
+        <a class="nav-link" href="#welcome-section">About</a>
+        <a class="nav-link" href="#projects">Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+   </div>
+    
+    <div id="welcome-section">
+        <div id="circle" class="circles"></div>
+        <div id="welcome-msg">
+            <h1>Hello There...</h1>
+            <h2>Welcome to Osama's profile</h2>
+            <P>After years of field engineering and projects management, turned eventually to WebDev as a career to pursue a life long to dream.</P>
+        </div>
+    </div>
+    
+    <div id="projects">
+        <div class="project-tile col-1"> 
+            <div class="label">
+                <a href="https://codepen.io/momomen/pen/XyxXBq">Tribute Page</a>
+            </div>
+        </div>
+        
+        <div class="project-tile col-2"> 
+            <div class="label">
+                <a href="https://codepen.io/momomen/pen/KrLvZe">Technical Paper</a>
+            </div>
+        </div>
+        
+        <div class="project-tile col-1"> 
+            <div class="label">
+                <a href="https://codepen.io/momomen/pen/vvJBzv">Product landing page</a>
+            </div>
+        </div>
+        
+        
+        
+        <div class="project-tile col-2"> 
+            <div class="label">
+                <a href="https://codepen.io/momomen/pen/Oaramj">Survey Form</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <div id="contact-text">
+            <h2>Thanks for visiting! You can contact me or even drop a like ;)</h2>
+            <p>I know it's nothing much, but that's why I need work...to improve...and to buys useless toys!!</p>
+        </div>
+        
+        <div class="profile">
+            <a id="profile-link" href="https://www.freecodecamp.org/momosa" target="_blank"><img src="FCC.jpg"></a>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="portofolio.js"></script>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+</body>
+    
+</html>
